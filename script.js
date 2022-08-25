@@ -4,6 +4,7 @@ let result = "";
 let resultsContainer = document.querySelector("#results");
 
 document.querySelector("#calculate").addEventListener("click", calculate);
+document.querySelector("#clear").addEventListener("click", clear);
 
 function calculate() {
   first = Number(document.querySelector("#firstnumber").value);
@@ -29,4 +30,10 @@ function calculate() {
   resultsContainer.innerHTML += `<li>${result}</li>`;
   resultsContainer.scrollTop += resultsContainer.scrollHeight;
   document.querySelector("#firstnumber").value = result;
+}
+
+function clear() {
+  resultsContainer.innerHTML = "";
+  document.querySelector("#firstnumber").value = "";
+  document.querySelector("#secondnumber").value = "";
 }
