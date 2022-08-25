@@ -19,4 +19,10 @@ function calculate() {
   } else {
     result = first / second;
   }
+
+  let doround = document.querySelector("#doround").checked;
+  let decimals = document.querySelector("#decimals").value;
+  if (doround == true) {
+    result = result.toFixed(decimals);
+  }
 }
