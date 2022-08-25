@@ -25,4 +25,8 @@ function calculate() {
   if (doround == true) {
     result = result.toFixed(decimals);
   }
+
+  resultsContainer.innerHTML += `<li>${result}</li>`;
+  resultsContainer.scrollTop += resultsContainer.scrollHeight;
+  document.querySelector("#firstnumber").value = result;
 }
